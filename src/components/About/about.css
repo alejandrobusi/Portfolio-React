@@ -1,0 +1,16 @@
+:root {
+  --primaryColor: #1e1e1e; 
+  --secondaryColor: #FB0C97;
+  --backgroundColor: linear-gradient(90deg, rgb(158, 88, 158) 0%, rgba(29,207,147,1) 100%);
+  --primaryFont: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fuente-secundaria: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+.shadowPng {
+  -webkit-filter: drop-shadow(3px 3px 3px #222);
+  filter: drop-shadow(3px 3px 3px #222);
+}
+.lined {
+  border-image-slice: 1;
+  border-image-source: var(--backgroundColor);
+  border-bottom: 1px solid ;
+}

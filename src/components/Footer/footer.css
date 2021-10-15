@@ -1,0 +1,32 @@
+:root {
+  --primaryColor: #1e1e1e; 
+  --secondaryColor: #FB0C97;
+  --backgroundColor: linear-gradient(90deg, rgb(158, 88, 158) 0%, rgba(29,207,147,1) 100%);
+  --primaryFont: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fuente-secundaria: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+.footerBack {
+  background-color: #1E1E1E;
+}
+.iconsFooter{
+  font-size: 2em;
+  list-style: none;
+  position: relative;
+  z-index: 4;
+}
+.iconsFooter a {
+  transition: 100ms;
+}
+.iconsFooter i:hover{
+  color: white;
+  transform: scale(1.15);
+}
+.iconsFooter i {
+  color: white;
+  text-decoration: none;
+}
+.borderFooter {
+  border-image-slice: 1;
+  border-image-source: var(--backgroundColor);
+  border-top: 4px solid ;
+}
