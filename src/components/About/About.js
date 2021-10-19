@@ -1,10 +1,26 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import '../About/about.css'
 import face from '../../assets/face.png'
+import logoJs from '../../assets/skills/js2.png'
+import logoMongo from '../../assets/skills/mongo.png'
+import nodeJs from '../../assets/skills/nodejs.png'
+import bootstrap from '../../assets/skills/bootstrap.png'
+import postman from '../../assets/skills/postman.png'
+import css3 from '../../assets/skills/css.png'
+import htmlLogo from '../../assets/skills/html.png'
+import git from '../../assets/skills/git.png'
+import reactLogo from '../../assets/skills/react.png'
+import trello from '../../assets/skills/trello.png'
+import { UseSpanishContext } from '../../Context/UseSpanishContext'
+import msgAbout from '../../lang/en-es-lang'
 
-function About() {
+
+function About(props) {
+  const [ useSpanish] = useContext(UseSpanishContext)
+  
   return (
     <div>
-      <h1 className="text-center text-uppercase lined py-3">About me</h1>
+      <h1 className="text-center text-uppercase lined py-3">{!useSpanish?msgAbout.en.aboutMe:msgAbout.es.aboutMe}</h1>
       <section className="my-5" id="about">
         <div className="container wow animate__animated animate__bounceIn">
           <div className="row">
@@ -20,10 +36,10 @@ function About() {
                       </div>
                       <div className="col-sm-6 col-md-7">
                         <div className="">
-                          <i className="fas fa-user"></i><p><span className="title-s">Nombre: </span> <span>Alejandro Busi</span></p>
-                          <i className="fas fa-briefcase"></i><p><span className="title-s">Perfil: </span> <span>full stack developer</span></p>
-                          <i className="fas fa-inbox"></i><p><span className="title-s">Email: </span> <span>alejandrobusi@gmail.com</span></p>
-                          <i className="fas fa-mobile-alt"></i><p><span className="title-s">Telefono: </span> <span>(381) 156266303</span></p>
+                          <i className="fas fa-user"></i><p><span className="title-s">{!useSpanish?msgAbout.en.name:msgAbout.es.name}</span> <span>Alejandro Busi</span></p>
+                          <i className="fas fa-briefcase"></i><p><span className="title-s">{!useSpanish?msgAbout.en.profile:msgAbout.es.profile}</span> <span>full stack developer</span></p>
+                          <i className="fas fa-inbox"></i><p><span className="title-s">{!useSpanish?msgAbout.en.email:msgAbout.es.email}</span> <span>alejandrobusi@gmail.com</span></p>
+                          <i className="fas fa-mobile-alt"></i><p><span className="title-s">{!useSpanish?msgAbout.en.telephone:msgAbout.es.telephone}</span> <span>(381) 156266303</span></p>
                         </div>
                       </div>
                     </div>
@@ -32,20 +48,17 @@ function About() {
                       <div className="pt-4 pt-md-0">
                         <div>
                           <h5>
-                            <strong>Acerca de mi...</strong>
+                            <strong>{!useSpanish?msgAbout.en.h5:msgAbout.es.h5}</strong>
                           </h5>
                         </div>
                         <p className="lead">
-                          Hola. Soy Ale, tengo 27 años, soy soltero y vivo en San Miguel de 
-                          Tucumán. Soy un apasionado por la tecnología desde chico. Me 
-                          gusta mucho la informática. la electrónica y la fotografía. Si Ud. 
-                          necesita referencias  por favor solicíteme.
+                          {!useSpanish?msgAbout.en.p1:msgAbout.es.p1}
                         </p>
                         <p className="lead">
-                          Me destaco tanto en hardware como en software. Las tecnologías de la informática son algo que siempre me ha fascinado. Estoy en el proceso de formación constantemente.
+                          {!useSpanish?msgAbout.en.p2:msgAbout.es.p2}
                         </p>
                         <p className="lead">
-                          Siempre dispuesto a mejorar. Personalmente e intelectualmente. Considero el desarrollo de habilidades blandas y habilidades duras como mi prioridad en este viaje como programador.
+                          {!useSpanish?msgAbout.en.p3:msgAbout.es.p3}
                         </p>
                       </div>
                     </div>
@@ -55,8 +68,70 @@ function About() {
             </div>
           </div>
         </section>
-        <section>
-          
+        <section className="container my-5 wow animate__animated animate__bounceIn">
+        <h1 className="text-center text-uppercase lined py-3">{!useSpanish?msgAbout.en.skills:msgAbout.es.skills}</h1>
+          <div className="row justify-content-center">
+            <div class="card mx-2 my-2">
+              <img src={logoJs} class="mt-2 card-img-top" alt="javascript"/>
+              <div class="card-body">
+                <p class="card-text text-center">JavaScript.</p>
+              </div>
+            </div>
+            <div class="card mx-2 my-2">
+              <img src={logoMongo} class="mt-2 card-img-top" alt="Mongo DB"/>
+              <div class="card-body">
+                <p class="card-text text-center">Mongo DB.</p>
+              </div>
+            </div>
+            <div class="card mx-2 my-2">
+              <img src={nodeJs} class="mt-2 card-img-top" alt="Node JS."/>
+              <div class="card-body">
+                <p class="card-text text-center">Node JS.</p>
+              </div>
+            </div>
+            <div class="card mx-2 my-2">
+              <img src={bootstrap} class="mt-2 card-img-top" alt="Bootstrap"/>
+              <div class="card-body">
+                <p class="card-text text-center">Bootstrap.</p>
+              </div>
+            </div>
+            <div class="card mx-2 my-2">
+              <img src={postman} class="mt-2 card-img-top" alt="Postman"/>
+              <div class="card-body">
+                <p class="card-text text-center">Postman.</p>
+              </div>
+            </div>
+            <div class="card mx-2 my-2">
+              <img src={css3} class="mt-2 card-img-top" alt="Css3"/>
+              <div class="card-body">
+                <p class="card-text text-center">CSS.</p>
+              </div>
+            </div>
+            <div class="card mx-2 my-2">
+              <img src={htmlLogo} class="mt-2 card-img-top" alt="HTML"/>
+              <div class="card-body">
+                <p class="card-text text-center">HTML.</p>
+              </div>
+            </div>
+            <div class="card mx-2 my-2">
+              <img src={git} class="mt-2 card-img-top" alt="Git"/>
+              <div class="card-body">
+                <p class="card-text text-center">GIT.</p>
+              </div>
+            </div>
+            <div class="card mx-2 my-2">  
+              <img src={reactLogo} class="mt-2 card-img-top" alt="React"/>
+              <div class="card-body">
+                <p class="card-text text-center">React.</p>
+              </div>
+            </div>
+            <div class="card mx-2 my-2">
+              <img src={trello} class="mt-2 card-img-top" alt="Trello"/>
+              <div class="card-body">
+                <p class="card-text text-center">Trello.</p>
+              </div>
+            </div>
+          </div>
         </section>
     </div>
   )

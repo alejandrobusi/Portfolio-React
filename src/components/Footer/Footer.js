@@ -3,7 +3,7 @@ import '../Footer/footer.css'
 
 function Footer() {
   return (
-    <div className="container-fluid g-0 aling-sefl-end">
+    <div>
       <footer class="bg-dark text-center text-white borderFooter">
         <div class="container p-2 pb-0">
           <section class="mb-2">

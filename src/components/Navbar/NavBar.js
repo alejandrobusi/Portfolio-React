@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import face from '../../assets/DSC_20491.jpg'
 import "../Navbar/navBar.css"
 import { NavLink } from 'react-router-dom'
+import { UseSpanishContext } from '../../Context/UseSpanishContext'
 
 function NavBar(props) {
+  const [ useSpanish, setUseSpanish ] = useContext(UseSpanishContext)
   return (
     <div>
       <header className="sticky-top">
@@ -17,12 +19,12 @@ function NavBar(props) {
               </button>
             </div>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div className="navbar-nav">
+              <div className="navbar-nav align-items-center">
                 <NavLink exact to="/" className="navLink" activeClassName="navLinkActive" aria-current="page" >Home</NavLink>
                 <NavLink exact to="/about"className="navLink" activeClassName="navLinkActive" aria-current="page" >About</NavLink>
                 <NavLink exact to="/home" className="navLink" activeClassName="navLinkActive" aria-current="page" >Portfolio</NavLink>
                 <NavLink exact to="/home" className="navLink" activeClassName="navLinkActive" aria-current="page" >Contact Me</NavLink>
-                
+                <button className="btn btn-warning" onClick={() => {setUseSpanish(!useSpanish)}} >🇪🇸 🇬🇧</button>
                 {/* <li className="navLink">
                   <NavLink exact to="/home" className="navLink" activeClassName="navLinkActive">Home</NavLink>
                 </li>
