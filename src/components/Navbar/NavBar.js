@@ -11,10 +11,12 @@ function NavBar(props) {
       <header className="sticky-top">
         <nav className="navbar navbar-expand-lg navbar-dark animate__animated animate__fadeIn bgNav shadow">
           <div className="container justify-content-lg-between justify-content-md-center justify-content-sm-center">
-            <div>
-              <img src={face} className="imgNav mx-4" alt="ImagePerson"/>
-              <a className="navbar-brand">Alejandro Busi</a>
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <div className="d-flex justify-content-between w-100">
+              <div className="d-flex">
+                <img src={face} className="imgNav me-3" alt="ImagePerson"/>
+                <a className="navbar-brand">Alejandro Busi</a>
+              </div>
+              <button className="navbar-toggler h-100 align-self-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
             </div>
