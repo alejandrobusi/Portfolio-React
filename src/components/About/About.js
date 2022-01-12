@@ -134,7 +134,7 @@ function About(props) {
           </div>
         </section>
         <section className="container d-flex justify-content-center">
-        <button className="btn btn-warning my-5" href="../../assets/AlejandroBusiCV.pdf">{!useSpanish?msgAbout.en.download:msgAbout.es.download}</button>
+        <a download="AlejandroBusiCV" title='Alejandro Busi - CV.pdf' href="../../assets/AlejandroBusiCV.pdf"><button className="btn btn-warning my-5">{!useSpanish?msgAbout.en.download:msgAbout.es.download}</button></a>
         </section>
     </div>
   )
