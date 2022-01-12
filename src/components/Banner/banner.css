@@ -21,7 +21,7 @@
   flex-grow: 0;
 }
 .bgImg {
-  background: url(../Banner/resources/banner2.jpg) center no-repeat;
+  background: url(../../assets/banner2.jpg) center no-repeat;
   background-size: cover;
   width: 100%;
 }

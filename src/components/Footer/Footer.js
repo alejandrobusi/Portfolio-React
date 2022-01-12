@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../Footer/footer.css'
+import { UseSpanishContext } from '../../Context/UseSpanishContext'
+import { msgFooter } from '../../lang/en-es-lang'
 
 function Footer() {
+  const [ useSpanish] = useContext(UseSpanishContext)
+  
   return (
     <div>
       <footer class="bg-dark text-center text-white borderFooter">
@@ -21,8 +25,8 @@ function Footer() {
             ></a>
           </section>
         </div>
-        <div class="text-center p-2 footerBack">
-          Developed and designed by Busi Alejandro ©2021. All rights reserved.
+        <div class="text-center p-2 footerBack">{!useSpanish?msgFooter.en.footer:msgFooter.es.footer}
+          {/* Developed and designed by Busi Alejandro ©2021. All rights reserved. */}
         </div>
       </footer>
     </div>

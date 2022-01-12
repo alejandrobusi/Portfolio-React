@@ -20,10 +20,10 @@
   border-image-source: var(--backgroundColor);
   border-bottom: 3px solid ;
 }
-.card{
-  width: 150px;
+.cardPort{
+  width : 26rem;
 }
-.card :hover {
+.cardPort :hover {
   transition: 200ms;
   transform: scale(1.1);
   -webkit-filter: drop-shadow(3px 3px 3px #222);

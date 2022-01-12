@@ -12,7 +12,7 @@ import git from '../../assets/skills/git.png'
 import reactLogo from '../../assets/skills/react.png'
 import trello from '../../assets/skills/trello.png'
 import { UseSpanishContext } from '../../Context/UseSpanishContext'
-import msgAbout from '../../lang/en-es-lang'
+import  { msgAbout } from '../../lang/en-es-lang'
 
 
 function About(props) {
@@ -21,7 +21,7 @@ function About(props) {
   return (
     <div>
       <h1 className="text-center text-uppercase lined py-3">{!useSpanish?msgAbout.en.aboutMe:msgAbout.es.aboutMe}</h1>
-      <section className="my-5" id="about">
+      <section className="my-5">
         <div className="container wow animate__animated animate__bounceIn">
           <div className="row">
             <div className="col-sm-12">
@@ -30,8 +30,8 @@ function About(props) {
                   <div className="col-md-6">
                     <div className="row justify-content-center">
                       <div className="col-sm-6 col-md-5">
-                        <div>
-                          <img src={face} className="img-fluid shadowPng" alt="Imagen rostro"/>
+                        <div className="shadowPng">
+                          <img src={face} className="img-fluid" alt="Imagen rostro"/>
                         </div>
                       </div>
                       <div className="col-sm-6 col-md-7">
@@ -70,7 +70,7 @@ function About(props) {
         </section>
         <section className="container my-5 wow animate__animated animate__bounceIn">
         <h1 className="text-center text-uppercase lined py-3">{!useSpanish?msgAbout.en.skills:msgAbout.es.skills}</h1>
-          <div className="row justify-content-center">
+          <div className="row justify-content-center col-sm-6 col-md-12 col-xl-12">
             <div class="card mx-2 my-2">
               <img src={logoJs} class="mt-2 card-img-top" alt="javascript"/>
               <div class="card-body">
@@ -132,6 +132,9 @@ function About(props) {
               </div>
             </div>
           </div>
+        </section>
+        <section className="container d-flex justify-content-center">
+        <button className="btn btn-warning my-5" href="../../assets/AlejandroBusiCV.pdf">{!useSpanish?msgAbout.en.download:msgAbout.es.download}</button>
         </section>
     </div>
   )
